@@ -1,5 +1,10 @@
 Parse::IRC
 ==========
 
+1.01	Sun Oct 15 11:02:02 BST 2006
+	- Added 'sirc.pl' to examples
+	- parse() will strip 'newlines'
+	- Adjusted testcase for stripping.
+
 1.00	Fri Sep 15 14:01:09 BST 2006
 	- Initial release

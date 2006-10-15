@@ -1,6 +1,7 @@
 Build.PL
 Changes
 examples/simplebot.pl
+examples/sirc.pl
 inc/Module/Install.pm
 inc/Module/Install/Base.pm
 inc/Module/Install/Build.pm

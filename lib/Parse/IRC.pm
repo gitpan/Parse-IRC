@@ -9,7 +9,7 @@ our @EXPORT = qw(parse_irc);
 
 use vars qw($VERSION);
 
-$VERSION = '1.00';
+$VERSION = '1.01';
 
 our $g = {
   space			=> qr/\x20+/o,
@@ -62,6 +62,7 @@ sub new {
 sub parse {
   my $self = shift;
   my $raw_line = shift || return;
+  $raw_line =~ s/(\x0D\x0A?|\x0A\x0D?)$//;
   if ( my($prefix, $command, $middles, $trailing) = $raw_line =~ m/$irc_regex/ ) {
       my $event = { raw_line => $raw_line };
       $event->{'prefix'} = $prefix if $prefix;
