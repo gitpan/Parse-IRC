@@ -19,4 +19,5 @@ README
 t/00_use.t
 t/01_pod.t
 t/02_pod_coverage.t
+t/02_test_kwalitee.t
 t/03_parse.t

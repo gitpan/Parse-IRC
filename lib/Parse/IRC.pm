@@ -9,7 +9,7 @@ our @EXPORT = qw(parse_irc);
 
 use vars qw($VERSION);
 
-$VERSION = '1.01';
+$VERSION = '1.02';
 
 our $g = {
   space			=> qr/\x20+/o,
@@ -71,7 +71,8 @@ sub parse {
       push @{$event->{'params'}}, (split /$g->{'space'}/, $middles) if defined ( $middles );
       push @{$event->{'params'}}, $trailing if defined( $trailing );
       return $event;
-  } else {
+  } 
+  else {
       warn "Received line $raw_line that is not IRC protocol\n" if $self->{debug};
   }
   return;
