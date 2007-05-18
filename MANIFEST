@@ -1,10 +1,8 @@
-Build.PL
 Changes
 examples/simplebot.pl
 examples/sirc.pl
 inc/Module/Install.pm
 inc/Module/Install/Base.pm
-inc/Module/Install/Build.pm
 inc/Module/Install/Can.pm
 inc/Module/Install/Fetch.pm
 inc/Module/Install/Makefile.pm

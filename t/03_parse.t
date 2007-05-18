@@ -1,4 +1,4 @@
-use Test::More tests => 14;
+use Test::More tests => 18;
 
 BEGIN { use_ok('Parse::IRC') };
 
@@ -28,3 +28,11 @@ ok( $irc_event3->{prefix} eq 'test!test@test.test', 'Prefix Test Object' );
 ok( $irc_event3->{params}->[0] eq '#Test', 'Params Test One Object' );
 ok( $irc_event3->{params}->[1] eq 'This is a test case', 'Params Test Two Object' );
 ok( $irc_event3->{command} eq 'PRIVMSG', 'Command Test Object');
+
+my $parser2 = Parse::IRC->new( public => 1 );
+
+my $irc_event4 = $parser2->parse( $original );
+ok( $irc_event4->{prefix} eq 'test!test@test.test', 'Prefix Test Object' );
+ok( $irc_event4->{params}->[0] eq '#Test', 'Params Test One Object' );
+ok( $irc_event4->{params}->[1] eq 'This is a test case', 'Params Test Two Object' );
+ok( $irc_event4->{command} eq 'PUBLIC', 'Command Test Object') or diag($irc_event4->{command});

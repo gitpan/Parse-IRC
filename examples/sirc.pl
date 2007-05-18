@@ -10,7 +10,9 @@ use IO::Socket;
 use IO::Select;
 use Parse::IRC;
 
-my $filter = Parse::IRC->new();
+$|=1;
+
+my $filter = Parse::IRC->new( public => 1 );
 
 # Add your IRC event handling sub routines here.
 # You will get $socket, followed by irc args as parameters.
@@ -31,6 +33,8 @@ my $sock = new IO::Socket::INET(PeerAddr => $server,
                                 PeerPort => 6667,
                                 Proto => 'tcp') or
                                     die "Can't connect\n";
+
+$sock->autoflush(1);
 
 # Log on to the server.
 print $sock "NICK $nick\r\n";

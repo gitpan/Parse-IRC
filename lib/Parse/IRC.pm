@@ -9,7 +9,7 @@ our @EXPORT = qw(parse_irc);
 
 use vars qw($VERSION);
 
-$VERSION = '1.02';
+$VERSION = '1.03';
 
 our $g = {
   space			=> qr/\x20+/o,
@@ -70,6 +70,9 @@ sub parse {
       $event->{'params'} = [] if ( defined ( $middles ) || defined ( $trailing ) );
       push @{$event->{'params'}}, (split /$g->{'space'}/, $middles) if defined ( $middles );
       push @{$event->{'params'}}, $trailing if defined( $trailing );
+      if ( $self->{public} and $event->{'command'} eq 'PRIVMSG' and $event->{'params'}->[0] =~ /^(\x23|\x26)/ ) {
+	$event->{'command'} = 'PUBLIC';
+      }
       return $event;
   } 
   else {
@@ -111,7 +114,7 @@ Using Parse::IRC in a simple IRC bot:
   use IO::Socket;
   use Parse::IRC;
 
-  my $parser = Parse::IRC->new();
+  my $parser = Parse::IRC->new( public => 1 );
 
   my %dispatch = ( 'ping' => \&irc_ping, '001' => \&irc_001, 'public' => \&irc_public );
 
@@ -139,7 +142,6 @@ Using Parse::IRC in a simple IRC bot:
     my $hashref = $parser->parse( $input );
     SWITCH: {
           my $type = lc $hashref->{command};
-          $type = 'public' if $type eq 'privmsg' and $hashref->{params}->[0] =~ /^#/;
           my @args;
           push @args, $hashref->{prefix} if $hashref->{prefix};
           push @args, @{ $hashref->{params} };
@@ -196,7 +198,8 @@ See below for the format of the hashref returned.
 =item new
 
 Creates a new Parse::IRC object. One may specify debug => 1 to enable warnings about non-IRC
-protcol lines.
+protcol lines. Specify public => 1 to enable the automatic conversation of privmsgs targeted at
+channels to 'public' instead of 'privmsg'.
 
 =back
 
