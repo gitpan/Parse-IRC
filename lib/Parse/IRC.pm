@@ -9,7 +9,7 @@ our @EXPORT = qw(parse_irc);
 
 use vars qw($VERSION);
 
-$VERSION = '1.04';
+$VERSION = '1.05';
 
 our $g = {
   space			=> qr/\x20+/o,
