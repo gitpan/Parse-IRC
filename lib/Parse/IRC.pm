@@ -9,7 +9,7 @@ our @EXPORT = qw(parse_irc);
 
 use vars qw($VERSION);
 
-$VERSION = '1.05';
+$VERSION = '1.06';
 
 our $g = {
   space			=> qr/\x20+/o,
@@ -48,8 +48,7 @@ $/x;
 
 sub parse_irc {
   my $string = shift || return;
-  my $parser = __PACKAGE__->new(@_);
-  return $parser->parse($string);
+  return __PACKAGE__->new(@_)->parse($string);
 }
 
 sub new {
