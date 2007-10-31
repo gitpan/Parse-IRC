@@ -1,22 +1,21 @@
 package Parse::IRC;
 
-use strict;
-
 # We export some stuff
 require Exporter;
-our @ISA = qw( Exporter );
-our @EXPORT = qw(parse_irc);
+@ISA = qw(Exporter);
+@EXPORT = qw(parse_irc);
 
+use strict;
 use vars qw($VERSION);
 
-$VERSION = '1.06';
+$VERSION = '1.07';
 
-our $g = {
+my $g = {
   space			=> qr/\x20+/o,
   trailing_space	=> qr/\x20*/o,
 };
 
-our $irc_regex = qr/^
+my $irc_regex = qr/^
   (?:
     \x3a                #  : comes before hand
     (\S+)               #  [prefix]
