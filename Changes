@@ -1,6 +1,9 @@
 Parse::IRC
 ==========
 
+1.08	Wed Feb 27 07:20:07 GMT 2008
+	- Some Kwalitee fixes.
+
 1.07	Wed Oct 31 12:25:30 GMT 2007
 	- Update included Module::Install to 0.68;
 	- Change 'our' variables to 'my';
