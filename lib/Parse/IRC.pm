@@ -9,7 +9,7 @@ use strict;
 use warnings;
 use vars qw($VERSION);
 
-$VERSION = '1.08';
+$VERSION = '1.10';
 
 my $g = {
   space			=> qr/\x20+/o,

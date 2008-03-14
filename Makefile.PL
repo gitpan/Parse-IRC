@@ -1,10 +1,14 @@
+use strict;
 use inc::Module::Install;
 name 'Parse-IRC';
 author 'Chris Williams <chris@bingosnet.co.uk>';
 version_from 'lib/Parse/IRC.pm';
 abstract_from 'lib/Parse/IRC.pm';
 license 'perl';
+author_tests 'xt';
 build_requires 'Test::More' => 0.47;
+requires 'strict' => 0;
+requires 'vars' => 0;
 requires 'warnings::compat' => 0 if $] < 5.006;
 requires 'Exporter' => 0;
 WriteAll;

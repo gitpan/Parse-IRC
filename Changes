@@ -1,6 +1,9 @@
 Parse::IRC
 ==========
 
+1.10	Fri Mar 14 10:41:46 GMT 2008
+	- Author tests to xt/
+
 1.08	Wed Feb 27 07:20:07 GMT 2008
 	- Some Kwalitee fixes.
 
