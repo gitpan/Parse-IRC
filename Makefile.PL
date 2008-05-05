@@ -1,3 +1,4 @@
+use 5.006;
 use strict;
 use inc::Module::Install;
 name 'Parse-IRC';
@@ -6,9 +7,9 @@ version_from 'lib/Parse/IRC.pm';
 abstract_from 'lib/Parse/IRC.pm';
 license 'perl';
 author_tests 'xt';
+perl_version 5.006;
 build_requires 'Test::More' => 0.47;
 requires 'strict' => 0;
 requires 'vars' => 0;
-requires 'warnings::compat' => 0 if $] < 5.006;
 requires 'Exporter' => 0;
 WriteAll;

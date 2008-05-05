@@ -9,7 +9,7 @@ use strict;
 use warnings;
 use vars qw($VERSION);
 
-$VERSION = '1.10';
+$VERSION = '1.12';
 
 my $g = {
   space			=> qr/\x20+/o,
@@ -235,6 +235,12 @@ For example, if the filter receives the following line, the following hashref is
 Chris 'BinGOs' Williams
 
 Based on code originally developed by Jonathan Steinert
+
+=head1 LICENSE
+
+Copyright C<(c)> Chris Williams and Jonathan Steinert
+
+This module may be used, modified, and distributed under the same terms as Perl itself. Please see the license that came with your Perl distribution for details.
 
 =head1 SEE ALSO
 
