@@ -1,48 +1,29 @@
-Parse::IRC
-==========
+==============================
+2011-10-20 10:22:19 +0100 1.18
+==============================
 
-1.16  Fri Dec 11 22:05:22 GMT 2009
-  - Ported over a fix from PoFi-IRCD
-  - Tidied up distribution
+  commit 604b94852b388681918df6eba580b68a20faddd3
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date:   Thu Oct 20 10:22:19 2011 +0100
+  
+    Bump version to 1.18
 
-1.14	Thu Apr 16 09:12:38 BST 2009
-	- Update the LICENSE file
-	- Tidy up the POD slightly
-	- Add repository to META.yml
+  commit aeb5f66125b4cb2f5698b9823fb624620802ae16
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date:   Thu Oct 20 10:01:46 2011 +0100
+  
+    Added ctcp/dcc support 
 
-1.12	Mon May  5 08:34:43 BST 2008
-	- Removed Kwalitee test, added license info
+==============================
+2009-12-11 22:06:42 +0000 1.16
+==============================
 
-1.10	Fri Mar 14 10:41:46 GMT 2008
-	- Author tests to xt/
+  commit a11d94e86cd6d9dc6ee814d0bc6b1b9e2276f856
+  Author: Chris Williams <chris@bingosnet.co.uk>
+  Date:   Fri Dec 11 22:06:42 2009 +0000
+  
+    Various dist fixes, ported a fix from POE::Filter::IRCD across 
 
-1.08	Wed Feb 27 07:20:07 GMT 2008
-	- Some Kwalitee fixes.
-
-1.07	Wed Oct 31 12:25:30 GMT 2007
-	- Update included Module::Install to 0.68;
-	- Change 'our' variables to 'my';
-	- Change Exporter positioning;
-
-1.06	Wed Oct 17 10:56:02 BST 2007
-	- Minor tweak to parse_irc() function.
-
-1.05	Wed Jul 25 11:01:06 BST 2007
-	- Fixed abstract-from in Makefile.PL;
-
-1.04	Sun Jul 22 09:27:09 BST 2007
-	- Kwalitee fixes by adding a prereq;
-
-1.03	Fri May 18 16:49:07 BST 2007
-	- Added 'public' option to autoconvert channel targetted privmsgs to public.
-
-1.02	Mon Feb 19 17:16:17 GMT 2007
-	- Added kwalitee test.
-
-1.01	Sun Oct 15 11:02:02 BST 2006
-	- Added 'sirc.pl' to examples
-	- parse() will strip 'newlines'
-	- Adjusted testcase for stripping.
-
-1.00	Fri Sep 15 14:01:09 BST 2006
-	- Initial release
+==============
+End of Excerpt
+==============
