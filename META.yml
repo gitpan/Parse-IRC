@@ -6,32 +6,17 @@ build_requires:
   ExtUtils::MakeMaker: 6.59
   Test::More: 0.47
 configure_requires:
-  ExtUtils::MakeMaker: 6.59
-distribution_type: module
+  ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Module::Install version 1.04'
+generated_by: 'Dist::Zilla version 4.300028, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Parse-IRC
-no_index:
-  directory:
-    - examples
-    - inc
-    - t
-    - xt
-provides:
-  Parse::IRC:
-    file: lib/Parse/IRC.pm
-    version: 1.18
 requires:
-  perl: 5.6.0
+  perl: 5.006
 resources:
-  homepage: https://github.com/bingos/parse-irc/tree
-  license: http://dev.perl.org/licenses/
-  repository:
-    type: git
-    url: git://github.com/bingos/parse-irc.git
-    web: https://github.com/bingos/parse-irc/tree
-version: 1.18
+  homepage: https://github.com/bingos/parse-irc
+  repository: https://github.com/bingos/parse-irc.git
+version: 1.20

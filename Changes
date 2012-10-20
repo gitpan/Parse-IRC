@@ -1,4 +1,20 @@
 ==============================
+2012-10-20 22:34:38 +0100 1.20
+==============================
+
+  commit 5e2ce48e7ed97cd1a4830d3187e9ff15e3288c62
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date:   Sat Oct 20 22:31:18 2012 +0100
+  
+    Switch to Dist::Zilla instead of Module::Install
+
+    Just a change in packaging, no functional changes.
+
+    Addresses an issue with Module::Install 1.04 as pointed out here:
+    http://weblog.bulknews.net/post/33907905561/do-not-ship-modules-with-
+    module-install-1-04 
+
+==============================
 2011-10-20 10:22:19 +0100 1.18
 ==============================
 
@@ -24,6 +40,6 @@
   
     Various dist fixes, ported a fix from POE::Filter::IRCD across 
 
-==============
-End of Excerpt
-==============
+====================================
+End of changes in the last 1825 days
+====================================

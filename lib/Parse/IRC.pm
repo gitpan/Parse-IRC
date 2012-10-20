@@ -1,4 +1,9 @@
 package Parse::IRC;
+{
+  $Parse::IRC::VERSION = '1.20';
+}
+
+#ABSTRACT: A parser for the IRC protocol.
 
 # We export some stuff
 require Exporter;
@@ -8,9 +13,6 @@ require Exporter;
 use strict;
 use warnings;
 use File::Basename qw[fileparse];
-use vars qw[$VERSION];
-
-$VERSION = '1.18';
 
 my $g = {
   space			=> qr/\x20+/o,
@@ -330,9 +332,15 @@ q[Operation Blackbriar];
 
 __END__
 
+=pod
+
 =head1 NAME
 
 Parse::IRC - A parser for the IRC protocol.
+
+=head1 VERSION
+
+version 1.20
 
 =head1 SYNOPSIS
 
@@ -474,20 +482,11 @@ For example, if the filter receives the following line, the following hashref is
 	     raw_line => ':moo.server.net 001 lamebot :Welcome to the IRC network lamebot',
 	   }
 
-
 =back
 
-=head1 AUTHOR
-
-Chris C<BinGOs> Williams <chris@bingosnet.co.uk>
+=head1 KUDOS
 
 Based on code originally developed by Jonathan Steinert and Dennis Taylor
-
-=head1 LICENSE
-
-Copyright E<copy> Chris Williams, Jonathan Steinert and Dennis Taylor
-
-This module may be used, modified, and distributed under the same terms as Perl itself. Please see the license that came with your Perl distribution for details.
 
 =head1 SEE ALSO
 
@@ -496,5 +495,16 @@ L<POE::Filter::IRCD>
 L<http://www.faqs.org/rfcs/rfc1459.html>
 
 L<http://www.faqs.org/rfcs/rfc2812.html>
+
+=head1 AUTHOR
+
+Chris Williams <chris@bingosnet.co.uk>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2012 by Chris Williams, Jonathan Steinert and Dennis Taylor.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
